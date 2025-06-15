@@ -1,0 +1,72 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+header{
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+}
+
+h1{
+    background-color: brown;
+    max-width: 190px;
+}
+
+nav{
+    display: flex;
+    margin: 10px;
+}
+
+a{
+    display: flex;
+    color: cadetblue;
+    margin:auto;
+}
+
+a.hover{
+    color: beige;
+}
+
+body{
+    background-color: rgb(229, 134, 147);
+
+}
+
+.first.title{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    color: rgb(14, 75, 75);
+}
+
+.our.mission{
+    display: flex;
+    justify-content:center;
+}
+
+.Destinations.Section{
+    display: flex;
+    align-items:stretch;
+    padding: 30px;
+}
+
+.Assila.Descreption{
+width:51%;
+}
+
+.tours{
+    display: flex;
+    align-items:stretch;
+    padding: 30px;
+}
+
+.assilah.tour{
+    width: 30%;
+}
+
+.our.Contact{
+    display: flex;
+    align-items:normal;
+}
