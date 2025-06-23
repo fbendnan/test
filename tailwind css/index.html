@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body >
+    <header class="fixed w-full shadow-md z-50 top-0 left-0">
+    <div class="bg-red-400 h-10 text-center font-medium py-2 ">123, Rue des Technologies  (+212 6 12 34 56 78)</div>
+    <nav class="flex flex-row justify-between p-5 bg-red-300  ">
+        <h1 class="font-semibold text-black text-2xl">My restaurant</h1>
+        <div>
+            <ul class="flex flex-row justify-between gap-3">
+                <li><a href="#about" class="text-black hover:text-rose-500">About</a></li>
+                <li><a href="#menu" class="text-black hover:text-rose-500">Menu</a></li>
+                <li><a href="#events" class="text-black hover:text-rose-500">Events</a></li>
+                <li><a href="#reservation" class="text-black hover:text-rose-500">Reservation</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+
+    <section id="about" class="min-h-screen bg-fixed bg-cover pb-96 font-light text-black pt-24" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5ed630035753581ab2175fe2/1602577138864-6OO8KEJS0BE8HX1ZSZIL/ROSE+RESTAURANT+BD-23.jpg');">
+        <div class="bg-rose-200 rounded-md h-132">
+        <h1 class="text-3xl text-center pt-7 pb-4 ">About</h1>
+        <p class="box-border text-center text-lg mb-7 px-20">For over 10 years, our restaurant has welcomed guests into a warm and friendly atmosphere.
+    We offer authentic Moroccan cuisine prepared with fresh, locally sourced ingredients.
+    Our passion for food is reflected in every dish, with attention to detail and exceptional service.
+    Whether you're enjoying a quick lunch or a family dinner, we are here to provide an unforgettable dining experience.</p>
+
+
+  <!-- Slideshow Container -->
+  <div class="relative w-full max-w-2xl mx-auto">
+
+    <!-- Slides -->
+    <div class="overflow-hidden relative h-72 rounded-lg">
+      <input type="radio" name="gallery" id="slide1" class="hidden peer/slide1" checked>
+      <input type="radio" name="gallery" id="slide2" class="hidden peer/slide2">
+      <input type="radio" name="gallery" id="slide3" class="hidden peer/slide3">
+
+      <div class="absolute inset-0 opacity-0 peer-checked/slide1:opacity-100 transition-opacity duration-700">
+        <img src="https://shoelifer.com/wp-content/uploads/2020/01/Shoelifer-Une-spot-casablanca-kikis-cafe.jpg" class="w-full h-full object-cover">
+      </div>
+      <div class="absolute inset-0 opacity-0 peer-checked/slide2:opacity-100 transition-opacity duration-700">
+        <img src="https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2021/01/16120247/COUV-ARTICLES-1920x1080-2023-06-28T235910.855.jpg" class="w-full h-full object-cover">
+      </div>
+      <div class="absolute inset-0 opacity-0 peer-checked/slide3:opacity-100 transition-opacity duration-700">
+        <img src="https://shoelifer.com/wp-content/uploads/2020/01/kikis.jpg" class="w-full h-full object-cover">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-center gap-4 mt-4">
+      <label for="slide1" class="w-4 h-4 bg-gray-400 rounded-full cursor-pointer hover:bg-gray-700"></label>
+      <label for="slide2" class="w-4 h-4 bg-gray-400 rounded-full cursor-pointer hover:bg-gray-700"></label>
+      <label for="slide3" class="w-4 h-4 bg-gray-400 rounded-full cursor-pointer hover:bg-gray-700"></label>
+    </div>
+  </div>
+        </div>
+    </section>
+
+    <section id="menu" class="min-h-screen bg-fixed bg-cover pb-96 font-light text-black pt-24 " style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/6b/e9/da/rose-restaurant-2023.jpg?w=900&h=500&s=1');">
+        <div class="bg-rose-200 rounded-md h-420">
+        <h1 class="text-3xl text-center pt-7 ">Menu</h1>
+        <h1 class="text-center mb-4">______________________________________________________________________</h1>
+        <ul class=" px-14 pb-16">
+            <div>
+            <h1 class="flex justify-center text-2xl  pb-4 font-medium">Breakfast</h1>
+            <div class="grid grid-cols-3 gap-9">
+                <li>
+                    <div class="h-20 gap-1">
+                    <h3 class="font-medium text-xl">Moroccan Harira</h3>
+                    <p>A traditional tomato-based soup with lentils and chickpeas.</p>
+                    </div>
+                    <div class="w-full h-60 overflow-hidden">
+                    <img  class="w-full h-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5VKCiw3o0_LyzvugbSq6PWKz93cEiNW7-yQ&s">
+                    </div>
+                </li>
+                <li>
+                    <div class="h-20">
+                    <h3 class="font-medium text-xl">Moroccan Bread with Olive Oil & Honey</h3>
+                    <p>Fresh homemade bread served with extra virgin olive oil and organic honey.</p>
+                    </div>
+                    <div class="w-full h-60 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="data:image/jpeg;base64,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">
+                    </div>
+                </li>
+                <li >
+                    <div class="h-20">
+                    <h3 class="font-medium text-xl">Boiled or Fried Eggs</h3>
+                    <p>Eggs prepared your way, simple and delicious.</p>
+                    </div>
+                    <div class="w-full h-60 overflow-hidden ">
+                        <img class="w-full h-full object-cover" src="https://www.allrecipes.com/thmb/5Kk8o5kGw3GPGmNzi6XBTn7MDMM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/277952-Air-Fryer-Hard-Boiled-Eggs-ddmfs-4x3-065-1-165548672bc44827b7a2758ae3717a77.jpg">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="h-20 gap-1">
+                    <h3 class="font-medium text-xl">Moroccan Mint Tea</h3>
+                    <p>Green tea infused with fresh mint and a touch of sugar.</p>
+                    </div>
+                    <div class="w-full h-60 overflow-hidden">
+                        <img  class="w-full h-full object-cover" src="https://i0.wp.com/moroccanfoodtour.com/wp-content/uploads/2020/07/moroccan-food-tour-Moroccan-mint-tea.jpg">
+                    </div>
+                </li>
+                <li>
+                    <div class="h-20">
+                    <h3 class="font-medium text-xl">Fresh Orange Juice</h3>
+                    <p>100% pure orange juice, freshly squeezed.</p>
+                    </div>
+                    <div class="w-full h-60 overflow-hidden">
+                        <img  class="w-full h-full object-cover" src="https://www.alphafoodie.com/wp-content/uploads/2020/11/Orange-Ginger-Juice-1-of-1.jpeg">
+                    </div>
+                </li>
+                <li >
+                    <div class="h-20">
+                    <h3 class="font-medium text-xl">Butter Couscous</h3>
+                    <p>Light steamed couscous topped with butter for a warm start to the day.</p>
+                    </div>
+                    <div class="w-full h-60 overflow-hidden ">
+                        <img  class="w-full h-full object-cover" src="https://successrice.com/wp-content/uploads/2025/03/SIMPLE-LEMON-BUTTER-PEARL-COUSCOUS-RECIPE%E2%80%93-PEARL-COUSCOUS-%E2%80%93-3-4-014-1540X870-High-Res-JPEG-1536x868.jpg">
+                    </div>
+                </li>
+
+            </div>
+        </ul>
+    
+
+        <h1 class="text-center mb-4">______________________________________________________________________</h1>
+        <ul class="box-border px-14 pb-16">
+            <div>
+            <h1 class="flex justify-center text-2xl  pb-4 font-medium">Lunch</h1>
+            <div class="grid grid-cols-3 gap-9">
+                <li>
+                    <div class="h-20 gap-1">
+                    <h3 class="font-medium text-xl">Chicken Tagine with Olives and Preserved Lemon</h3>
+                    <p>Slow-cooked chicken in Moroccan spices with green olives and lemon.</p>
+                    </div>
+                    <div class="w-full h-60 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://www.tajinecook.com/wp-content/uploads/2024/11/Meatball-Recipe-with-Eggs-1.jpg">
+                    </div>
+                </li>
+                <li>
+                    <div class="h-20">
+                    <h3 class="font-medium text-xl">Royal Couscous</h3>
+                    <p>Steamed semolina served with lamb, chicken, vegetables, and chickpeas.</p>
+                    </div>
+                    <div class="w-full h-60 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://img.cuisineaz.com/660x495/2022/02/23/i183013-couscous-marocain.jpeg">
+                    </div>
+                </li>
+                <li >
+                    <div class="h-20">
+                    <h3 class="font-medium text-xl">Moroccan Mixed Salad</h3>
+                    <p>A colorful mix of tomatoes, cucumbers, onions, and herbs.</p>
+                    </div>
+                    <div class="w-full h-60 overflow-hidden ">
+                        <img class="w-full h-full object-cover" src="https://i.pinimg.com/736x/58/6e/5b/586e5b132b161adf302c66402d54a004.jpg">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="h-20 gap-1">
+                    <h3 class="font-medium text-xl">Seasonal Juice</h3>
+                    <p>Natural juice made from fresh seasonal fruits.</p>
+                    </div>
+                    <div class="w-full h-60 overflow-hidden">
+                        <img  class="w-full h-full object-cover" src="https://refreshjuice.com.au/cdn/shop/articles/Featured_Image.png?v=1730100716">
+                    </div>
+                </li>
+                <li>
+                    <div class="h-20">
+                    <h3 class="font-medium text-xl">Mineral or Sparkling Water</h3>
+                    <p>Cold bottled water, still or sparkling.</p>
+                    </div>
+                    <div class="w-full h-60 overflow-hidden">
+                        <img  class="w-full h-full object-cover" src="https://t4.ftcdn.net/jpg/01/31/64/97/360_F_131649726_utXkKecGdCo7GrJjIANt47dDYzbAhZpR.webp">
+                    </div>
+                </li>
+                <li >
+                    <div class="h-20">
+                    <h3 class="font-medium text-xl">Seasonal Fruit or Yogurt Cup</h3>
+                    <p>Fresh fruit or a cup of yogurt with fruit toppings.</p>
+                    </div>
+                    <div class="w-full h-60 overflow-hidden ">
+                        <img  class="w-full h-full object-cover" src="https://hellolittlehome.com/wp-content/uploads/2019/04/yogurt-parfait-2.jpg">
+                    </div>
+                </li>
+
+            </div>
+        </ul>
+        </div>
+
+
+    </div>
+    </section>
+
+    <section id="events" class="min-h-screen bg-fixed bg-cover pb-96 text-black font-light pt-24" style="background-image: url('https://restaurantengine.com/wp-content/uploads/2015/07/regular-events-660x440.jpg');">
+        <div class="bg-rose-200 rounded-md h-200">
+        <h1 class="text-3xl text-center pt-7 pb-4">Events</h1>
+            <ul class=" h-10 ">
+                <li>
+                    <div class="text-center">
+                        <h3 class="font-medium text-xl">International Food Night</h3>
+                        <p>Each month, showcase cuisine from a different country.
+                            <li class="text-center">🇮🇹 Italian Night (Pizza, Pasta)</li>
+                            <li class="text-center">🇹🇷 Turkish Night (Kebabs, Baklava)</li>
+                            <li class="text-center">🇮🇳 Indian Night (Curry, Biryani)</li>
+                        </p>
+                        <img class="mx-auto my-8" src="https://res-3.cloudinary.com/amn/image/upload/c_fill,h_400,w_712/v1719648453/adventistplace-prod/croppedtisch-hiltl-buffet-2_mhavgu.jpg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section id="reservation" class="min-h-screen bg-fixed bg-cover pb-96 text-black font-light pt-24" style="background-image: url('https://assets.entrepreneur.com/content/3x2/2000/1666103211-GettyImages-136595783.jpg');">
+        <div class="bg-rose-200 rounded-md h-130">
+        <h1 class="text-3xl text-center pt-7 pb-4">Make a Reservation</h1>
+        <div class="flex justify-around">
+        <div class="h-130 w-120">
+            <img src="https://bimpos.com/sites/default/files/images/posts/5ffdc91e-ef5f-48d0-bba0-a33ac3121705.jpeg" class="rounded-md">
+        </div>
+            <form >
+                <div class="flex justify-center mb-3">
+                    <label class="p-2 font-light text-lg h-12 w-44" for="name">Full name</label>
+                    <input type="text" id="name" name="name" required class="border border-gray-500 px-3 py-1 bg-red-200 rounded-md w-90">
+                </div>
+
+                <div class="flex justify-center mb-3">
+                    <label class="p-2 font-light text-lg h-12 w-44" for="email">Email Address </label>
+                    <input type="email" id="Email" name="Email" required class="border border-gray-500 px-3 py-1 bg-red-200 rounded-md w-90">
+                </div>
+
+                <div class="flex justify-center mb-3">
+                    <label class="p-2 font-light text-lg h-12 w-44" for="Phone">Phone Number </label>
+                    <input type="tel" id="Phone" name="Phone" class="border border-gray-500 px-3 py-1 bg-red-200 rounded-md w-90">
+                </div>
+
+                <div class="flex justify-center mb-3">
+                    <label class="p-2 font-light text-lg h-12 w-44" for="Date">Reservation Date </label>
+                    <input type="date" id="Date" name="Date" required class="border border-gray-500 px-3 py-1 bg-red-200 rounded-md w-90">
+                </div>
+
+                <div class="flex justify-center mb-3">
+                    <label class="p-2 font-light text-lg h-12 w-44" for="Time">Time </label>
+                    <input type="time" id="Time" name="Time" class="border border-gray-500 px-3 py-1 bg-red-200 rounded-md w-90">
+                </div>
+
+                <div class="flex justify-center mb-3">
+                    <label class="p-2 font-light text-lg h-12 w-44" for="People">Number of People </label>
+                    <input type="number" id="People" name="People" class="border border-gray-500 px-3 py-1 bg-red-200 rounded-md w-90">
+                </div>
+
+                <div class=" ml-112">
+                    <button type="submit" class="bg-rose-400 text-center border border-gray-500 py-2 px-4 rounded-md">Reserve</button>
+                </div>
+
+            </form>
+            </div>
+        </div>
+    </section>
+
+  </body>
+</html>
