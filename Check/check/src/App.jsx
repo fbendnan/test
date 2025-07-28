@@ -1,15 +1,10 @@
-
-import Body from "./homepage/Body";
-import Footer from "./homepage/Footer";
-import Header from "./homepage/Header";
+import Markup from "./router/Markup";
 
 
 function App() {
   return (
     <>
-    <Header />
-    <Body />
-    <Footer />
+    <Markup />
     </>
   );
 }

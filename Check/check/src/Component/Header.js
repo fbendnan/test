@@ -5,8 +5,7 @@ import { PiHeart } from "react-icons/pi";
 import { RiTruckLine } from "react-icons/ri";
 import { BsCreditCard2Back } from "react-icons/bs";
 import { FaHeadset } from "react-icons/fa6";
-
-
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -25,32 +24,44 @@ function Header() {
       </nav>
       <div>
         <ul className="flex justify-center-safe gap-14 font-semibold text-sm text-gray-800 py-4">
-          <li>HOME</li>
+          <li>
+          <Link to="/">HOME</Link>
+          </li>
           <li>STORE</li>
           <li>ACCESSORIES</li>
           <li>BRAND</li>
           <li>PAGES</li>
-          <li>ABOUT US</li>
+          <li>
+            <Link to="/about">ABOUT US</Link>
+          </li>
           <li>NEWS</li>
-          <li>CONTACT US </li>
+          <li>
+            <Link to="/contact">CONTACT US </Link>
+          </li>
         </ul>
         <div className="h-px w-306 bg-gray-400 mx-auto my-4" />
       </div>
 
       <div className="flex justify-around">
         <div className="flex gap-2 ">
-          <RiTruckLine className="w-6 h-6 text-orange-300"/>
-          <p className="text-xs flex items-end font-semibold text-gray-500">FREE SHIPPING</p>
+          <RiTruckLine className="w-6 h-6 text-orange-300" />
+          <p className="text-xs flex items-end font-semibold text-gray-500">
+            FREE SHIPPING
+          </p>
         </div>
 
         <div className="flex gap-2 ">
-          <BsCreditCard2Back className="w-6 h-6 text-orange-300"/>
-          <p className="text-xs flex items-end font-semibold text-gray-500">100% MONEY BACK</p>
+          <BsCreditCard2Back className="w-6 h-6 text-orange-300" />
+          <p className="text-xs flex items-end font-semibold text-gray-500">
+            100% MONEY BACK
+          </p>
         </div>
 
         <div className="flex gap-2 ">
-          <FaHeadset className="w-6 h-6 text-orange-300"/>
-          <p className="text-xs flex items-end font-semibold text-gray-500">SUPPORT 24/7</p>
+          <FaHeadset className="w-6 h-6 text-orange-300" />
+          <p className="text-xs flex items-end font-semibold text-gray-500">
+            SUPPORT 24/7
+          </p>
         </div>
       </div>
     </header>
