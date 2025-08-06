@@ -1,63 +1,81 @@
-import React from 'react';
-import './App.css';
+import React from "react";
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
       Person: {
-        fullName: 'Fatima Zahra',
-        bio: 'I love coding and learning new things.',
-        imgSrc: 'https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.jpg?s=612x612&w=0&k=20&c=jlYes8ZfnCmD0lLn-vKvzQoKXrWaEcVypHnB5MuO-g8=',
-        profession: 'Web Developer'
+        fullName: "Fatima Zahra Bendnane",
+        bio: "👩‍💻 I'm Fatima Zahra, a passionate web developer who loves turning ideas into real digital experiences. I enjoy learning new technologies, especially React, and I believe that every line of code is a step closer to building something meaningful.",
+        imgSrc:
+          "https://www.shutterstock.com/image-photo/hands-typing-on-laptop-programming-600nw-2480023489.jpg",
+        profession: "Web Developer",
       },
-      shows: false,
-      mountedTime: 0
+      shows: true,
+      mountedTime: 0,
     };
-    this.intervalId = null;
   }
 
   toggleShow = () => {
-    this.setState((prevState) => ({
-      shows: !prevState.shows
-    }));
+    this.setState({ shows: !this.state.shows });
   };
 
+  ShowsContent = () => {
+    if (this.state.shows)
+      return (
+        <div>
+          <img src={this.state.Person.imgSrc}></img>
+          <h1 className="text-blue-900 font-semibold text-3xl">
+            {this.state.Person.fullName}
+          </h1>
+          <h5 className="text-md">{this.state.Person.bio}</h5>
+          <h6 className="text-xl font-semibold">
+            {this.state.Person.profession}{" "}
+          </h6>
+        </div>
+      );
+    return null;
+  };
+
+  HideShowButton() {
+    if (this.state.shows) {
+      return <p>Hide</p>;
+    } else {
+      return <p>Show</p>;
+    }
+  }
+
   componentDidMount() {
-    this.intervalId = setInterval(() => {
+    this.interval = setInterval(() => {
       this.setState((prevState) => ({
-        mountedTime: prevState.mountedTime + 1
+        mountedTime: prevState.mountedTime + 1,
       }));
     }, 1000);
   }
 
   componentWillUnmount() {
-    clearInterval(this.intervalId);
+    clearInterval(this.interval);
   }
 
   render() {
-    const { Person, shows, mountedTime } = this.state;
-
     return (
-      <div className="App">
-        <h1>My First Class Component</h1>
-        <button onClick={this.toggleShow}>
-          {shows ? 'Hide Person' : 'Show Person'}
-        </button>
+      <>
+        <div className="flex  justify-center my-20 border mx-90">
+          <div className="text-center">
+            {this.ShowsContent()}
 
-        {shows && (
-          <div className="profile">
-            <img src={Person.imgSrc} alt="Profile" />
-            <h2>{Person.fullName}</h2>
-            <p>{Person.bio}</p>
-            <p><strong>{Person.profession}</strong></p>
+            <p>Time since mounted: {this.state.mountedTime} seconds</p>
+            <div>
+              <button
+                className="border my-6 px-4 py-1 text-white text-xl bg-blue-900"
+                onClick={this.toggleShow}
+              >
+                {this.HideShowButton()}
+              </button>
+            </div>
           </div>
-        )}
-
-        <p>App has been open for {mountedTime} seconds</p>
-      </div>
+        </div>
+      </>
     );
   }
 }
-
-export default App;
