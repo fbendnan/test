@@ -6,7 +6,6 @@ export const MealContext = createContext();
 export function MealProvider({ children }) {
   const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [isSearching, setIsSearching] = useState(false);
   const [search, setSearch] = useState("");
 
   const fetchRandomMeals = async () => {
@@ -50,7 +49,7 @@ export function MealProvider({ children }) {
 
   return (
     <MealContext.Provider
-      value={{ meals, fetchSearchMeals, search, setSearch, setIsSearching }}
+      value={{ meals, fetchSearchMeals, search, setSearch }}
     >
       {children}
     </MealContext.Provider>

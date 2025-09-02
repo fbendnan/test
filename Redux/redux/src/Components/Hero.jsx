@@ -3,11 +3,9 @@ import { IoSearchOutline } from "react-icons/io5";
 import { MealContext } from "../Context/Context";
 export default function Hero() {
 
-  const { setIsSearching, setSearch, search } = useContext(MealContext);
+  const { setSearch, search } = useContext(MealContext);
 
-  const handleSearch = () => {
-    setIsSearching(true);
-  };
+
 
   return (
     <div className="flex justify-center mt-10 border rounded-md mx-[460px] bg-gray-100">
@@ -26,7 +24,6 @@ export default function Hero() {
       />
       <button
         className="bg-rose-700 px-3 my-1 rounded-md hover:bg-rose-600"
-        onClick={handleSearch}
       >
         Search
       </button>
