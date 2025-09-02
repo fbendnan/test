@@ -1,4 +1,3 @@
-
 import { createContext, useEffect, useState } from "react";
 import { getRandomMeals, searchMeals } from "../API/MealApi";
 
@@ -8,7 +7,7 @@ export function MealProvider({ children }) {
   const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
-  const [query, setQuery] = useState("");
+  const [search, setSearch] = useState("");
 
   const fetchRandomMeals = async () => {
     try {
@@ -29,12 +28,14 @@ export function MealProvider({ children }) {
     }
   };
 
-  const fetchSearchMeals = async (query) => {
+  const fetchSearchMeals = async () => {
     try {
       setLoading(true);
 
-      const res = await searchMeals(query);
-      setMeals(res.data.meals || []); 
+      const res = await searchMeals(search);
+      console.log(meals);
+      setMeals(res.data.meals || []);
+      console.log(res.data.meals);
     } catch (error) {
       console.error("Error loading search meals...", error);
       setMeals([]);
@@ -44,14 +45,12 @@ export function MealProvider({ children }) {
   };
 
   useEffect(() => {
-    if (!isSearching) {
-      fetchRandomMeals();
-    }
-  }, [isSearching]);
+    search ? fetchSearchMeals() : fetchRandomMeals();
+  }, [search]);
 
   return (
     <MealContext.Provider
-      value={{ meals, fetchSearchMeals, setQuery, setIsSearching }}
+      value={{ meals, fetchSearchMeals, search, setSearch, setIsSearching }}
     >
       {children}
     </MealContext.Provider>
